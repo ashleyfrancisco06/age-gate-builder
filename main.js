@@ -9,13 +9,12 @@ function monthOptions(){
 		let option= document.createElement('option');
 		option.id = "months";
 		choices= select.appendChild(option);
-		console.log(choices)
 		choices.innerHTML=monthArr[i]
 	}
 }
 
 function yearOptions(){
-	
+
 	//create each option
 	for(let i=1970; i<=2019;i++){
 		//access select 
@@ -23,7 +22,6 @@ function yearOptions(){
 		let option= document.createElement('option');
 		option.id = "years";
 		let choices= select.appendChild(option);
-		console.log(choices)
 		choices.innerHTML=[i];
 	}
 }
@@ -45,19 +43,31 @@ function handleForm(e){
 }
 form.addEventListener('submit', handleForm);
 
+//form validation
+function validateForm() {
+  let nameVal = document.forms["form"]["name"].value;
+  let monVal = document.forms["form"]["selMonth"].value;
+  let yearVal = document.forms["form"]["selYear"].value;
+  console.log(yearVal)
+
+  if (nameVal == "" || monVal == "MM" || yearVal == "YYYY") {
+    alert("You are missing one or more forms");
+    return false;
+	}
+}
 
 //check for age 
 function checkAge(){
 	//grabbing birthday
-	let DOBMonth = document.getElementById('month').value
-	let DOBYear = document.getElementById("year").value;
+	let DOBMonth = document.getElementById('selMonth').value;
+	let DOBYear = document.getElementById("selYear").value;
 	console.log(DOBYear)
 	console.log(DOBMonth)
 	let age = yyyy - DOBYear
 	console.log(age)
 	let validation=  document.getElementById('validation')
 
-	if( age >= 21){
+	if(age >= 21){
 		
 		return(validation.innerHTML = "Welcome!")
 		
@@ -66,5 +76,18 @@ function checkAge(){
 	}
 }
 
+
+
+
+//Remember User
+//put onclick for checkbox
+//when checkbox is checked, grab user input in username field
+//the push into usersArr
+//if user is in array, display "Welcome back" , otherwise checkAge
+
+
+function checkUser(){
+	let UsersArr= []
+}
 
 

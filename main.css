@@ -1,43 +1,52 @@
 *{
 	margin:0 auto;
 	font-family: 'Spectral SC',serif;
-	color:#1F363D;
-	/*background-color: #EBEBEB;*/
 }
 body{
-	
-	justify-content: center;
-	align-items: center;
-
+	background-image: url('./images/got-wallpaper.jpg');
+	background-size: cover;
 }
-
 .form{
     width:500px;
-  /*  border: 1px solid #1F363D;
-    border-radius: 5px;
-    box-shadow: 5px 5px #8D99AE;*/
+    border-radius: 5px ;
+    color: #EBEBEB;
     text-align: center;
     padding:50px;
-    margin-top:80px;
-    /*background-color: #B7D3F2;*/
-
-
-    }
+    margin-top:200px;
+    background-color: rgba(24,25,27,.7);
+}
 .header{
     width:500px;
   	text-align: center;
   	font-size: 25px;
-
 }
 h2{
-	font-size: 15px;
+	font-size: 30px;
 }
 .got-image{
 	width:500px;
 	height:300px;
-
 }
 #image{
 	margin: 0 auto;
 	padding:20px 0px;
 }
+#name{
+	width:300px;
+	border-radius: 2px;
+	font-size:15px;
+
+}
+#selMonth, #selYear{
+	font-size: 15px;
+	margin: 10px 0px;
+	padding:10px 0px;
+}
+#enter-button{
+	border-radius: 2px;
+	font-size: 15px;
+}
+
+
+
+

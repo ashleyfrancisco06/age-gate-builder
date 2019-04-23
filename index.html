@@ -14,13 +14,11 @@
 </head>
 <body>
   
-    <form class="form animated fadeInUp">
-        <div id="image">
-           <img src="./images/GOT.png" alt="GOTimage" class="got-image" />
-        </div>
-        <header class="header">Welcome to the Gate of The Moon</header>
+    <form class="form animated fadeInUp" onsubmit="return validateForm();" id="form" >
+       
         <h2>You must be 21 years or older to enter.</h2>
-
+        <input type="text" name="name" placeholder="Name" id="name"/>
+        <br/>
         <label for="dob">Date of Birth:</label>
         <select type="text" id="selMonth" name="dob" onclick="monthOptions();">
             <option class="months">MM</option>
