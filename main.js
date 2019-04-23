@@ -1,3 +1,21 @@
+
+function monthOptions(){
+	const monthArr= ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+	//create each option
+	for(let i= 0; i<monthArr.length;i++){
+		//access select 
+		let select = document.getElementById("selMonth");
+		let option= document.createElement('option');
+		option.id = "months";
+		choices= select.appendChild(option);
+		console.log(choices)
+		choices.innerHTML=monthArr[i]
+	}
+}
+
+
+
 //current day
 let today= new Date();
 let mm = today.getMonth()+1;
@@ -30,7 +48,7 @@ function checkAge(){
 		return(validation.innerHTML = "Welcome!")
 		
 	}else{
-		return(validation.innerHTML="Error! You're not old enough.")
+		return(validation.innerHTML="Sorry,you're not old enough.")
 	}
 }
 

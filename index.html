@@ -15,8 +15,12 @@
         <header class="header">Welcome to Age Gate</header>
 
         <label for="dob">Date of Birth:</label>
-        <input type="text" id="month"  size="3" name="dob" placeholder="MM" />
-         <input type="text" id="year"  size="4" name="dob" placeholder="YYYY" />
+        <select type="text" id="selMonth" name="dob" onclick="monthOptions();">
+            <option class="months">MM</option>
+        </select>
+         <select type="text" id="year" name="dob" onclick="" >
+             <option id="years">YYYY</option>
+         </select>
         <button type="submit" for="dob" onclick="checkAge();" id="enter-button" name="enter-button">Enter</button>
         <br/>
         <input type="checkbox" onclick="" class="checkbox"/>
