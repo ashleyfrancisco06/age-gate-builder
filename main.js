@@ -1,20 +1,29 @@
-let defaultVal = document.getElementById('dob').defaultValue = "1999-01";
-let DOB = document.getElementById("dob").value;
-console.log(defaultVal)
-console.log(DOB)
-let age = 2019 - DOB
-console.log(age)
-let form = document.querySelector('.form');
-console.log(form)
+//current day
+let today= new Date();
+let mm = today.getMonth()+1;
+let yyyy = today.getFullYear();
+console.log(today)
+console.log(mm,yyyy)
 
+
+//prevent refresh after 
+let form = document.querySelector('.form');
 function handleForm(e){
 	e.preventDefault();
 }
-
 form.addEventListener('submit', handleForm);
 
+
+//check for age 
 function checkAge(){
-	console.log("clicked")
+	//grabbing birthday
+	let DOBMonth = document.getElementById('month').value
+	let DOBYear = document.getElementById("year").value;
+	console.log(DOBYear)
+	console.log(DOBMonth)
+	let age = yyyy - DOBYear
+	console.log(age)
+	
 	if( age >= 21){
 		alert ("Welcome");
 
