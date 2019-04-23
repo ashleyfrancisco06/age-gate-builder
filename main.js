@@ -23,12 +23,14 @@ function checkAge(){
 	console.log(DOBMonth)
 	let age = yyyy - DOBYear
 	console.log(age)
-	
-	if( age >= 21){
-		alert ("Welcome");
+	let validation=  document.getElementById('validation')
 
+	if( age >= 21){
+		
+		return(validation.innerHTML = "Welcome!")
+		
 	}else{
-		alert ("Error.")
+		return(validation.innerHTML="Error! You're not old enough.")
 	}
 }
 
