@@ -26,9 +26,9 @@
          <select type="text" id="selYear" name="dob" onclick="yearOptions();" >
              <option id="years">YYYY</option>
          </select>
-        <button type="submit" for="dob" onclick="checkAge();" id="enter-button" name="enter-button">Enter</button>
+        <button type="submit" for="dob" onclick="saveUser(); checkAge();"  id="enter-button" name="enter-button">Enter</button>
         <br/>
-        <input type="checkbox" onclick="" class="checkbox"/>
+        <input type="checkbox" id="checkbox" onchange="return check(); return uncheck();" />
         <label for="checkbox">Remember me?</label>
 
         <p id="validation"></p>

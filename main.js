@@ -1,3 +1,9 @@
+//current day
+let today= new Date();
+let mm = today.getMonth()+1;
+let yyyy = today.getFullYear();
+console.log(today)
+console.log(mm,yyyy)
 
 function monthOptions(){
 	const monthArr= ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -27,15 +33,6 @@ function yearOptions(){
 }
 
 
-
-//current day
-let today= new Date();
-let mm = today.getMonth()+1;
-let yyyy = today.getFullYear();
-console.log(today)
-console.log(mm,yyyy)
-
-
 //prevent refresh after 
 let form = document.querySelector('.form');
 function handleForm(e){
@@ -48,7 +45,7 @@ function validateForm() {
   let nameVal = document.forms["form"]["name"].value;
   let monVal = document.forms["form"]["selMonth"].value;
   let yearVal = document.forms["form"]["selYear"].value;
-  console.log(yearVal)
+  // console.log(yearVal)
 
   if (nameVal == "" || monVal == "MM" || yearVal == "YYYY") {
     alert("You are missing one or more forms");
@@ -61,8 +58,7 @@ function checkAge(){
 	//grabbing birthday
 	let DOBMonth = document.getElementById('selMonth').value;
 	let DOBYear = document.getElementById("selYear").value;
-	console.log(DOBYear)
-	console.log(DOBMonth)
+	
 	let age = yyyy - DOBYear
 	console.log(age)
 	let validation=  document.getElementById('validation')
@@ -76,18 +72,40 @@ function checkAge(){
 	}
 }
 
-
-
-
 //Remember User
 //put onclick for checkbox
 //when checkbox is checked, grab user input in username field
 //the push into usersArr
-//if user is in array, display "Welcome back" , otherwise checkAge
-
-
-function checkUser(){
-	let UsersArr= []
+//if user is in array, display "Welcome back" , otherwise checkA
+function saveUser(){
+	//user array
+	let usersArr= []
+	console.log(usersArr)
+	//select checkbox
+	let checkbox = document.getElementById("checkbox");
+	// checkbox.checked = false;
+	//select username field
+	let user = document.getElementById('name').value
+	console.log(user)
+	// if checkbox is checked, select user input field and grab value 
+	if(checkbox.checked == true){
+		return usersArr.push(user)
+		console.log(usersArr)
+	}
+	console.log(checkbox.checked)
+	//check array if there
 }
+function check() {
+    document.getElementById("checkbox").checked = true;
+}
+
+function uncheck() {
+    document.getElementById("checkbox").checked = false;
+}
+
+
+
+
+
 
 
