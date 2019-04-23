@@ -8,11 +8,18 @@
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Miltonian+Tattoo|Spectral+SC" rel="stylesheet">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <script defer src="main.js"></script>
 </head>
 <body>
-    <form class="form">
-        <header class="header">Welcome to Age Gate</header>
+  
+    <form class="form animated fadeInUp">
+        <div id="image">
+           <img src="./images/GOT.png" alt="GOTimage" class="got-image" />
+        </div>
+        <header class="header">Welcome to the Gate of The Moon</header>
+        <h2>You must be 21 years or older to enter.</h2>
 
         <label for="dob">Date of Birth:</label>
         <select type="text" id="selMonth" name="dob" onclick="monthOptions();">

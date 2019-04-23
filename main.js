@@ -13,8 +13,9 @@ function monthOptions(){
 		choices.innerHTML=monthArr[i]
 	}
 }
-function yearOptions(){
 
+function yearOptions(){
+	
 	//create each option
 	for(let i=1970; i<=2019;i++){
 		//access select 
