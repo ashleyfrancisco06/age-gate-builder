@@ -13,6 +13,19 @@ function monthOptions(){
 		choices.innerHTML=monthArr[i]
 	}
 }
+function yearOptions(){
+
+	//create each option
+	for(let i=1970; i<=2019;i++){
+		//access select 
+		let select = document.getElementById("selYear");
+		let option= document.createElement('option');
+		option.id = "years";
+		let choices= select.appendChild(option);
+		console.log(choices)
+		choices.innerHTML=[i];
+	}
+}
 
 
 
